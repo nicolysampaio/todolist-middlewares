@@ -23,6 +23,20 @@ function checksExistsUserAccount(request, response, next) {
   return next();
 }
 
+function checksCreateTodosUserAvailability(request, response, next) {
+  const { username } = request;
+
+  const user = users.find((user) => user.username === username);
+
+  if(user.pro === false && user.todos.length === 10) {
+    return response.status(403).json({ error: "Limited To Do exceeded" });
+  }
+
+  request.user = user;
+
+  return next();  
+}
+
 // function checksCreateTodosUserAvailability(request, response, next) {
 //   // Complete aqui
 // }
