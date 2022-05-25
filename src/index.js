@@ -9,21 +9,21 @@ app.use(cors());
 
 const users = [];
 
-function checksExistsUserAccount(request, response, next) {
-  // Complete aqui
-}
+// function checksExistsUserAccount(request, response, next) {
+//   // Complete aqui
+// }
 
-function checksCreateTodosUserAvailability(request, response, next) {
-  // Complete aqui
-}
+// function checksCreateTodosUserAvailability(request, response, next) {
+//   // Complete aqui
+// }
 
-function checksTodoExists(request, response, next) {
-  // Complete aqui
-}
+// function checksTodoExists(request, response, next) {
+//   // Complete aqui
+// }
 
-function findUserById(request, response, next) {
-  // Complete aqui
-}
+// function findUserById(request, response, next) {
+//   // Complete aqui
+// }
 
 app.post('/users', (request, response) => {
   const { name, username } = request.body;
